@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  --user-font-scale: 1rem - 16px;
+  font-size: clamp(
+    0.875rem,
+    0.4626rem + 1.0309vw + var(--user-font-scale),
+    1.125rem
+  );
+
+  --main-background-color: #faf6f5;
+  --primary-color: #111827;
+  --secondary-color: #e5d1cd;
+  --nav-hover-color: #268bd2;
+
+  --sidebar-background-color: #954535;
+  --sidebar-primary-color: #e5d1cd;
+  --sidebar-secondary-color: #b57d72;
+
+  /* https://javisperez.github.io/tailwindcolorshades/?el-salva=954535 */
+}
+
+[data-theme="dark"] {
+  --main-background-color: #592920;
+  --primary-color: #b57d72;
+  --secondary-color: #954535;
+  --nav-hover-color: #268bd2;
+
+  --sidebar-background-color: #49221a;
+  --sidebar-primary-color: #e5d1cd;
+  --sidebar-secondary-color: #b57d72;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--sidebar-background-color);
+  color: var(--sidebar-primary-color);
+  text-align: center;
+}
+body {
+  background-color: var(--main-background-color);
+  color: var(--primary-color);
+}
+a {
+  text-decoration: none;
+  color: var(--nav-hover-color);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 4rem 2rem 4rem 22rem;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    padding: 4rem 0;
+    width: 20rem;
+  }
+  .sidebar img {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    margin: 20px 0;
+  }
+  .sidebar h1 {
+    text-transform: uppercase;
+  }
+  .sidebar .title div {
+    color: var(--sidebar-secondary-color);
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .sidebar nav {
+    text-transform: uppercase;
+    margin: 30px 0;
+    font-size: 1rem;
+  }
+  .sidebar nav div {
+    margin: 10px 0;
+  }
+  .sidebar a {
+    text-decoration: none;
+    color: var(--sidebar-primary-color);
+  }
+  .sidebar a:hover {
+    color: var(--nav-hover-color);
+  }
+  .sidebar .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .sidebar .icons svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--sidebar-primary-color);
+  }
+  .sidebar .icons svg:hover {
+    fill: var(--nav-hover-color);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    height: 4rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  .sidebar h1 {
+    padding: 1rem 0;
+  }
+  .sidebar img,
+  .sidebar .title {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111827;
+    color: #fff;
+  }
+}
