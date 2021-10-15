@@ -3,7 +3,7 @@ title: About me
 layout: ../layouts/BaseLayout.astro
 ---
 
-# PREFERRED WORK
+# DEV WORK
 
 <br />
 
@@ -15,7 +15,7 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
-## 1. FRONTEND
+## ![Lit](/assets/lit.png) &nbsp;&nbsp; FRONTEND
 
 - [Lit](https://lit.dev/) (LitElement)
 - Web components
@@ -23,7 +23,7 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
-## 2. FLUTTER
+## ![Flutter](/assets/flutter.png) &nbsp;&nbsp; FLUTTER
 
 - Apps (Android/iOS)
 - Web
@@ -31,20 +31,14 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
-## 3. NOTION
-
-[Notion](https:/notion.so/) is something I use for many things in my personal life. I believe the potential of Notion is pretty much limitless
-
-<br />
+## ![Notion](/assets/notion.svg) &nbsp;&nbsp; NOTION
 
 - Notion templates and workflows
 - Notion API
 
 <br />
 
-<br />
-
-## 4. C#, .NET
+## ![C#](/assets/csharp.png) &nbsp;&nbsp; C#, .NET
 
 - [ASP.NET](http://asp.NET) MVC
 - ASP.NET Core

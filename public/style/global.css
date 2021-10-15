@@ -15,7 +15,7 @@
 
   --main-background-color: #faf6f5;
   --primary-color: #111827;
-  --secondary-color: #e5d1cd;
+  --secondary-color: #703428;
   --nav-hover-color: #268bd2;
 
   --sidebar-background-color: #954535;
@@ -27,8 +27,8 @@
 
 [data-theme="dark"] {
   --main-background-color: #592920;
-  --primary-color: #b57d72;
-  --secondary-color: #954535;
+  --primary-color: #e5d1cd;
+  --secondary-color: #b57d72;
   --nav-hover-color: #268bd2;
 
   --sidebar-background-color: #49221a;
@@ -55,6 +55,12 @@ a {
 }
 svg {
   fill: var(--primary-color);
+}
+ul {
+  margin: 10px;
+}
+li {
+  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {

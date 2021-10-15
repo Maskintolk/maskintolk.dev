@@ -3,6 +3,10 @@ title: Contact
 layout: ../layouts/BaseLayout.astro
 ---
 
+# ABOUT ME
+
+<br />
+
 ## I am an inquisitive and pragmatic JavaScript/TypeScript web developer with a keen interest in Flutter, people and UX.
 
 <br />
