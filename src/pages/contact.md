@@ -11,7 +11,7 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
-## The best way to contact me is through E-mail. So, send me an email if you have somthing you wish to discuss...
+### The best way to contact me is through E-mail. So, send me an e-mail if you have somthing you wish to discuss...
 
 <br />
 

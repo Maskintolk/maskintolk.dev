@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: About me
 layout: ../layouts/BaseLayout.astro
 ---
 

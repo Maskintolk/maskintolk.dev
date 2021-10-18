@@ -23,17 +23,25 @@
   --sidebar-secondary-color: #b57d72;
 
   /* https://javisperez.github.io/tailwindcolorshades/?el-salva=954535 */
+
+  --text-color: #111827bb;
+
+  --font-size-text: 1rem;
+  --font-size-header: 1.2rem;
+  --font-size-title: 2rem;
 }
 
 [data-theme="dark"] {
   --main-background-color: #592920;
-  --primary-color: #e5d1cd;
+  --primary-color: #e5d1cdbb;
   --secondary-color: #b57d72;
   --nav-hover-color: #268bd2;
 
   --sidebar-background-color: #49221a;
-  --sidebar-primary-color: #e5d1cd;
-  --sidebar-secondary-color: #b57d72;
+  --sidebar-primary-color: #e5d1cdbb;
+  --sidebar-secondary-color: #b57d72bb;
+
+  --text-color: #b57d72bb;
 }
 
 .sidebar {
@@ -62,10 +70,24 @@ ul {
 li {
   color: var(--secondary-color);
 }
+h1 {
+  font-size: var(--font-size-title);
+  font-weight: normal;
+}
+h2 {
+  font-size: var(--font-size-header);
+  font-weight: normal;
+}
+h3 {
+  font-size: var(--font-size-text);
+  font-weight: normal;
+  line-height: 1.5rem;
+  color: var(--text-color);
+}
 
 @media (min-width: 768px) {
   body {
-    padding: 2rem 2rem 4rem 22rem;
+    padding: 2rem 8rem 2rem 28rem;
     width: 100%;
     min-height: 100vh;
   }
