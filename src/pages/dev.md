@@ -2,7 +2,6 @@
 title: About me
 layout: ../layouts/BaseLayout.astro
 ---
-
 # DEV WORK
 
 <br />

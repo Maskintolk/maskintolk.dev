@@ -1,7 +1,9 @@
 # Home page of Jakob Skov
 
-# Astro + Lit Example showcasing me and my interests in computing. The site is primarily meant to
+# Personal website showcasing me and my software development interests.
 
-# be a means for connecting with potential employers.
+# Technologies used
+
+-- Astro + Lit
 
 This example showcases Astro working with [Lit](https://lit.dev/).
