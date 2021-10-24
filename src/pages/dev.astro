@@ -1,7 +1,10 @@
 ---
-title: About me
-layout: ../layouts/BaseLayout.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Markdown } from 'astro/components';
+import '../components/dev-tech';
 ---
+<BaseLayout title="Dev work">
+  <Markdown>
 # DEV WORK
 
 <br />
@@ -14,31 +17,29 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
-## ![Lit](/assets/lit.png) &nbsp;&nbsp; FRONTEND
-
+<dev-tech name="FRONTEND" icon="/assets/lit.png" size="medium"></dev-tech>
 - [Lit](https://lit.dev/) (LitElement)
 - Web components
 - PWA
 
 <br />
 
-## ![Flutter](/assets/flutter.png) &nbsp;&nbsp; FLUTTER
-
+<dev-tech name="FLUTTER" icon="/assets/flutter.png" size="medium"></dev-tech>
 - Apps (Android/iOS)
 - Web
 - Prototyping
 
 <br />
 
-## ![Notion](/assets/notion.svg) &nbsp;&nbsp; NOTION
-
+<dev-tech name="NOTION" icon="/assets/notion.svg" size="medium"></dev-tech>
 - Notion templates and workflows
 - Notion API
 
 <br />
 
-## ![C#](/assets/csharp.png) &nbsp;&nbsp; C#, .NET
-
+<dev-tech name="C#, .NET" icon="/assets/csharp.png" size="medium"></dev-tech>
 - [ASP.NET](http://asp.NET) MVC
 - ASP.NET Core
 - REST APIs
+  </Markdown>
+</BaseLayout>

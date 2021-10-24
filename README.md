@@ -2,7 +2,7 @@
 
 # Personal website showcasing me and my software development interests.
 
-# Technologies used
+### Technologies used
 
 -- Astro + Lit
 

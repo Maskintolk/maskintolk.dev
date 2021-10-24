@@ -4,7 +4,8 @@
 
 import '../components/ThemeSwitcher.js';
 
-const {title} = Astro.props;
+// "content" comes from .md sub pages like, "contact"
+const {content, title} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -17,7 +18,7 @@ const {title} = Astro.props;
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap">
 <link rel="stylesheet" href="/style/global.css" type="text/css">
 
-  <title>{title}</title>
+  <title>{title || content.title}</title>
 </head>
 <body>
   <div class="sidebar">
