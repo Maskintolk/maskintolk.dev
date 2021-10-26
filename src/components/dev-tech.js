@@ -6,9 +6,9 @@ const styles = css`
     --image-width: 33px;
     --image-height: 33px;
 
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
   :host([size='large']) {
     --font-size: var(--font-size-title);
@@ -26,7 +26,7 @@ const styles = css`
     --image-height: calc(33px * 0.8);
   }
   div {
-    margin: 0 20px;
+    margin-right: 10px;
   }
   img {
     width: var(--image-width);

@@ -3,6 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { Markdown } from 'astro/components';
 import '../components/dev-tech';
 ---
+<style>
+:root {
+  --sidebar-position: fixed;
+}
+</style>
 <BaseLayout title="Dev work">
   <Markdown>
 # DEV WORK
@@ -31,13 +36,13 @@ import '../components/dev-tech';
 
 <br />
 
-<dev-tech name="NOTION" icon="/assets/notion.svg" size="medium"></dev-tech>
+<dev-tech name="NOTION" icon="/assets/notion.png" size="medium"></dev-tech>
 - Notion templates and workflows
 - Notion API
 
 <br />
 
-<dev-tech name="C#, .NET" icon="/assets/csharp.png" size="medium"></dev-tech>
+<dev-tech name="C#, .NET" icon="/assets/c-sharp.png" size="medium"></dev-tech>
 - [ASP.NET](http://asp.NET) MVC
 - ASP.NET Core
 - REST APIs

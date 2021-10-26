@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import '../../components/dev-tech.js';
+import '../../components/dev-project.js';
+
+// TODO: Define every project in an .md file. That way we can import them
+//       and show them below.
+//       This makes it easy to implement filtering when displaying them
+//       It also makes it possible to update projects straight from Github
+---
+<style>
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+dev-project {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  max-width: 290px;
+  width: 290px;
+}
+dev-tech {
+  margin-right: 20px;
+}
+h1 {
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 965px;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+</style>
+<BaseLayout title="Projects">
+  <h1>Personal Projects</h1>
+
+  <div class="projects">
+    <dev-project name="Maskintolk.dev" description="This very website!" github="https://github.com/Maskintolk/maskintolk.dev" page="/projects/maskintolk" screenshot="/assets/maskintolk.png">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+    <dev-project name="Utility POC" description="Utility billing system POC" page="/projects/utility" screenshot="/assets/poc-light.png">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="PWA" icon="/assets/pwa.png" size="small"></dev-tech>
+        <dev-tech name="HIGHCHARTS" icon="https://api.nuget.org/v3-flatcontainer/highsoft.highcharts/8.0.0.3/icon" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+    <dev-project name="Notion Page Widget" description="Notion page as (Android homepage) widget" github="https://github.com/Maskintolk/notion-page-widget" screenshot="/assets/notionwidget.png" page="/projects/notionwidget">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="VITE" icon="/assets/vite.svg" size="small"></dev-tech>
+        <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+    <dev-project name="My Family Bookshop" description="Show a list of pages from a Notion database" github="https://github.com/Maskintolk/notion-page-widget" screenshot="/assets/bookclub.png" page="/projects/bookclub">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
+        <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </div>
+</BaseLayout>
