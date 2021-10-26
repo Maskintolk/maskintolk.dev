@@ -40,7 +40,12 @@ const styles = css`
   }
   a {
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--primary-color);
+  }
+  a:hover {
     color: var(--nav-hover-color);
   }
   img {
@@ -49,9 +54,7 @@ const styles = css`
   }
   .more {
     text-align: center;
-    width: 100%;
     padding: 10px;
-    margin: 0;
   }
 `;
 
