@@ -2,16 +2,13 @@ import { LitElement, css, html } from 'lit';
 
 const styles = css`
   :host {
-    --width: 286px;
+    --width: 290px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid var(--secondary-color);
     min-height: 385px;
-  }
-  :host(:hover) {
-    border: 2px solid var(--primary-color);
+    background-color: var(--card-background-color);
   }
   .title {
     display: flex;

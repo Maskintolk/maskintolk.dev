@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import '../../components/dev-tech.js';
+import '../../components/dev-project.js';
+
+// TODO: Define every project in an .md file. That way we can import them
+//       and show them below.
+//       This makes it easy to implement filtering when displaying them
+//       It also makes it possible to update projects straight from Github
+---
+<style>
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+dev-project {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  max-width: 290px;
+  width: 290px;
+}
+dev-tech {
+  margin-right: 20px;
+}
+h1 {
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 965px;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+</style>
+<BaseLayout title="Projects">
+  <h1>Previous Work</h1>
+
+  <div class="projects">
+
+    <dev-project name="Utility POC" description="Utility billing system POC" page="/projects/utility" screenshot="/assets/poc-light.jpg">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="PWA" icon="/assets/pwa.png" size="small"></dev-tech>
+        <dev-tech name="HIGHCHARTS" icon="https://api.nuget.org/v3-flatcontainer/highsoft.highcharts/8.0.0.3/icon" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+    <dev-project name="FlexLink REST API" description="REST API for iPhone app" page="/work/flexlink">
+      <div slot="tech">
+        <dev-tech name="C#" icon="/assets/c-sharp.png" size="small"></dev-tech>
+        <dev-tech name=".NET Core" icon="/assets/netcore.png" size="small"></dev-tech>
+        <dev-tech name="Swagger" icon="/assets/swagger.png" size="small"></dev-tech>
+        <dev-tech name="Push Notifications" icon="/assets/notifications-hero.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+  </div>
+</BaseLayout>
