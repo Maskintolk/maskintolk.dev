@@ -1,20 +1,19 @@
 import { LitElement, css, html } from 'lit';
 
-import './dev-github';
-
 const styles = css`
   :host {
+    --width: 286px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
-    border: 2px dotted var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     min-height: 385px;
   }
   :host(:hover) {
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--primary-color);
   }
-  div:first-of-type {
+  .title {
     display: flex;
     align-items: flex-end;
     padding-top: 20px;
@@ -36,7 +35,8 @@ const styles = css`
     font-weight: 300;
   }
   .tech {
-    min-height: 142px;
+    margin-top: 30px;
+    min-height: 122px;
   }
   a {
     text-decoration: none;
@@ -49,34 +49,39 @@ const styles = css`
     color: var(--nav-hover-color);
   }
   img {
-    width: 50%;
-    height: 100px;
+    width: var(--width);
+    height: var(--width);
   }
   .more {
     text-align: center;
     padding: 10px;
   }
+  .main {
+    padding: 0 20px;
+  }
 `;
 
 const template = (el) => html`
-  <div>${el.name}</div>
-  <div>
-    <p>${el.description}</p>
-  </div>
   <div>
     <img src="${el.screenshot}" />
   </div>
-  <div class="tech">
-    <h3>TECH</h3>
-    <slot name="tech"></slot>
+  <div class="main">
+    <div class="title">${el.name}</div>
+    <div>
+      <p>${el.description}</p>
+    </div>
+    <div class="tech">
+      <h3>TECH</h3>
+      <slot name="tech"></slot>
+    </div>
+    ${el.page !== ''
+      ? html`
+          <div class="more">
+            <a href="${el.page}">More info ...</a>
+          </div>
+        `
+      : ''}
   </div>
-  ${el.page !== ''
-    ? html`
-        <div class="more">
-          <a href="${el.page}">More info ...</a>
-        </div>
-      `
-    : ''}
 `;
 
 export class DevProjectElement extends LitElement {
