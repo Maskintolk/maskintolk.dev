@@ -13,7 +13,6 @@ layout: ../layouts/BaseLayout.astro
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 40ch;
     text-align: center;
     min-height: 90vh;
   }

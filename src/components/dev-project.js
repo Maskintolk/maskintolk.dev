@@ -2,17 +2,23 @@ import { LitElement, css, html } from 'lit';
 
 const styles = css`
   :host {
-    --width: 290px;
+    --image-width: 290px;
 
+    display: grid;
+    grid-template-columns: var(--image-width) 1fr;
+    grid-template-rows: 1fr;
     background-color: var(--card-background-color);
   }
   h3 {
     font-size: var(--font-size-text);
     font-weight: 400;
+    margin: 0;
   }
   p {
     font-size: var(--font-size-text);
     font-weight: 300;
+    margin: 10px 0 0 0;
+    padding: 10px;
   }
   a {
     text-decoration: none;
@@ -24,48 +30,40 @@ const styles = css`
   a:hover {
     color: var(--nav-hover-color);
   }
-  img {
-    width: var(--width);
-    height: var(--width);
-  }
-  .more {
-    text-align: center;
-    padding: 10px;
-  }
   .main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-height: var(--image-width);
     padding: 0 20px;
   }
+  .more {
+    padding: 10px 0;
+    text-align: center;
+  }
   .title {
-    display: flex;
-    align-items: flex-end;
-    padding-top: 20px;
-    height: 52px;
     font-size: var(--font-size-header);
     font-weight: 500;
     text-transform: uppercase;
     border-bottom: 2px solid var(--secondary-color);
+    padding: 10px 0;
   }
-  .description {
-    height: 80px;
-  }
-  .tech {
-    margin-top: 30px;
-    min-height: 142px;
-    text-align: center;
+  img {
+    width: var(--image-width);
+    height: var(--image-width);
   }
 `;
 
 const template = (el) => html`
-  <div>
+  <div class="image">
     <img src="${el.screenshot}" />
   </div>
   <div class="main">
-    <div class="title">${el.name}</div>
-    <div class="description">
-      <p>${el.description}</p>
+    <div>
+      <div class="title">${el.name}</div>
+      <div class="description">
+        <p>${el.description}</p>
+      </div>
     </div>
     <div class="tech">
       <h3>TECH</h3>
