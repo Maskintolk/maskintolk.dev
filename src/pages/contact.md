@@ -2,6 +2,17 @@
 title: Contact
 layout: ../layouts/BaseLayout.astro
 ---
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+  }
+</style>
+<div>
 
 # CONTACT
 
@@ -16,3 +27,4 @@ layout: ../layouts/BaseLayout.astro
 <br />
 
 [skovsen@protonmail.com](mailto:skovsen@protonmail.com)
+</div>
