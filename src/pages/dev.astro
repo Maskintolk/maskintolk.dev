@@ -4,8 +4,15 @@ import { Markdown } from 'astro/components';
 import '../components/dev-tech';
 ---
 <style>
-:root {
-  --sidebar-position: fixed;
+.tech {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+dev-tech {
+  margin: 20px;
+  width: 200px;
+  max-width: 200px;
 }
 </style>
 <BaseLayout title="Work Interests">
@@ -21,30 +28,33 @@ import '../components/dev-tech';
 ### These days I am most enthusiastic about the following technologies (in order of interest):
 
 <br />
+<div class="tech">
+  <div>
+  <dev-tech name="FRONTEND" icon="/assets/lit.png" size="medium"></dev-tech>
+  - [Lit](https://lit.dev/) (LitElement)
+  - Web components
+  - PWA
+  </div>
 
-<dev-tech name="FRONTEND" icon="/assets/lit.png" size="medium"></dev-tech>
-- [Lit](https://lit.dev/) (LitElement)
-- Web components
-- PWA
+  <div>
+  <dev-tech name="FLUTTER" icon="/assets/flutter.png" size="medium"></dev-tech>
+  - Apps (Android/iOS)
+  - Web
+  - Prototyping
+  </div>
 
-<br />
+  <div>
+  <dev-tech name="NOTION" icon="/assets/notion.png" size="medium"></dev-tech>
+  - Notion templates
+  - Notion API
+  </div>
 
-<dev-tech name="FLUTTER" icon="/assets/flutter.png" size="medium"></dev-tech>
-- Apps (Android/iOS)
-- Web
-- Prototyping
-
-<br />
-
-<dev-tech name="NOTION" icon="/assets/notion.png" size="medium"></dev-tech>
-- Notion templates and workflows
-- Notion API
-
-<br />
-
-<dev-tech name="C#, .NET" icon="/assets/c-sharp.png" size="medium"></dev-tech>
-- [ASP.NET](http://asp.NET) MVC
-- .NET Core
-- REST APIs
+  <div>
+  <dev-tech name="C#, .NET" icon="/assets/c-sharp.png" size="medium"></dev-tech>
+  - [ASP.NET](http://asp.NET) MVC
+  - .NET Core
+  - REST APIs
+  </div>
+</div>
   </Markdown>
 </BaseLayout>

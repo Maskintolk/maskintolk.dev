@@ -21,9 +21,7 @@
   --sidebar-secondary-color: #b57d72;
 
   --main-background-color: #f0eeee;
-  /* --main-background-color: #faf6f5; */
   --card-background-color: #faf6f5;
-  /* --card-background-color: #f0eeee; */
 
   /* https://javisperez.github.io/tailwindcolorshades/?el-salva=954535 */
 
@@ -122,6 +120,9 @@ h3 {
     height: 175px;
     margin: 20px 0;
   }
+  .sidebar .title {
+    margin-top: 20px;
+  }
   .sidebar .title div {
     color: var(--sidebar-secondary-color);
     line-height: 1.5;
@@ -161,6 +162,9 @@ h3 {
   .sidebar .icons svg:hover {
     fill: var(--nav-hover-color);
     cursor: pointer;
+  }
+  main {
+    text-align: center;
   }
 }
 
