@@ -11,7 +11,10 @@ import '../../components/dev-project.js';
 ---
 <style>
 .projects {
+  display: flex;
+  flex-direction: column;
   margin: 30px 0;
+  align-items: center;
 }
 dev-project {
   margin-right: 40px;
@@ -26,10 +29,6 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .projects {
-    flex-direction: row;
-    align-items: flex-start;
-  }
   h1 {
     margin: 0;
   }
@@ -59,6 +58,13 @@ h1 {
       <div slot="tech">
         <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
         <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+
+    <dev-project name="lagipiere.com" description="Rental showcase" page="/projects/lagipiere" screenshot="/assets/thehouse.jpg">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="TYPESCRIPT" icon="/assets/typescript.png" size="small"></dev-tech>
       </div>
     </dev-project>
   </div>

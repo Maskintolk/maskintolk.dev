@@ -171,6 +171,7 @@ h3 {
 @media (min-width: 320px) and (max-width: 767px) {
   main {
     padding: 2rem 1rem;
+    text-align: center;
   }
   .sidebar {
     height: 4rem;

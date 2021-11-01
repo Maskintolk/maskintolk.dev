@@ -4,9 +4,8 @@ const styles = css`
   :host {
     --image-width: 290px;
 
-    display: grid;
-    grid-template-columns: var(--image-width) 1fr;
-    grid-template-rows: 1fr;
+    display: block;
+    width: 290px;
     background-color: var(--card-background-color);
   }
   h3 {
@@ -51,6 +50,15 @@ const styles = css`
   img {
     width: var(--image-width);
     height: var(--image-width);
+  }
+
+  @media (min-width: 768px) {
+    :host {
+      display: grid;
+      grid-template-columns: var(--image-width) 1fr;
+      grid-template-rows: 1fr;
+      width: 600px;
+    }
   }
 `;
 
