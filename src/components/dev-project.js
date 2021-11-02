@@ -11,18 +11,16 @@ const styles = css`
   h3 {
     font-size: var(--font-size-text);
     font-weight: 400;
-    margin: 0;
   }
   p {
     font-size: var(--font-size-text);
     font-weight: 300;
     margin: 10px 0 0 0;
-    padding: 10px;
   }
   a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: var(--font-size-text);
     font-weight: 300;
     color: var(--primary-color);
   }
@@ -34,17 +32,16 @@ const styles = css`
     flex-direction: column;
     justify-content: space-between;
     max-height: var(--image-width);
-    padding: 0 20px;
+    padding: 10px 20px;
   }
   .more {
     padding: 10px 0;
     text-align: center;
   }
   .title {
-    font-size: var(--font-size-header);
+    font-size: 1.5rem;
     font-weight: 500;
     text-transform: uppercase;
-    border-bottom: 2px solid var(--secondary-color);
     padding: 10px 0;
   }
   img {
@@ -57,7 +54,8 @@ const styles = css`
       display: grid;
       grid-template-columns: var(--image-width) 1fr;
       grid-template-rows: 1fr;
-      width: 600px;
+      min-width: 700px;
+      height: var(--image-width);
     }
   }
 `;

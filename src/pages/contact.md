@@ -22,6 +22,10 @@ layout: ../layouts/BaseLayout.astro
 
 <br />
 
+### Feel free to contact me if you have something frontend related you have to get fixed or built. Or if you have a need for a spceific Notion workflow or template.
+
+<br />
+
 ### The best way to contact me is through E-mail. So, send me an e-mail if you have somthing you wish to discuss...
 
 <br />
