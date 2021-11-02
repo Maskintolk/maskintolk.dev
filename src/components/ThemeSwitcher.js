@@ -1,9 +1,9 @@
 // Most of the code for this custom element was lifted from the following article:
 // https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
 
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css } from 'lit';
 
-export const tagName = "theme-switcher";
+export const tagName = 'theme-switcher';
 
 const styles = css`
   :host {
@@ -40,7 +40,7 @@ const styles = css`
   .slider:before {
     background-color: #fff;
     bottom: 4px;
-    content: "";
+    content: '';
     height: 26px;
     left: 4px;
     position: absolute;
@@ -66,14 +66,15 @@ const styles = css`
 
   div {
     font-size: 0.8rem;
-    color: var(--secondary-color);
+    color: var(--sidebar-secondary-color);
+    margin-top: 5px;
   }
 `;
 
 class ThemeSwitcher extends LitElement {
   constructor() {
     super();
-    this.label = "Enable dark mode";
+    this.label = 'Enable dark mode';
   }
 
   static get styles() {
@@ -81,24 +82,24 @@ class ThemeSwitcher extends LitElement {
   }
 
   toggleTheme(e) {
-    const theme = e.target.checked ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    const theme = e.target.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
     this.toggleLabel(e.target.checked);
   }
 
   toggleLabel(isDarkMode) {
-    this.label = isDarkMode ? "Disable dark mode" : "Enable dark mode";
+    this.label = isDarkMode ? 'Disable dark mode' : 'Enable dark mode';
   }
 
   firstUpdated() {
-    const currentTheme = localStorage.getItem("theme")
-      ? localStorage.getItem("theme")
+    const currentTheme = localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
       : null;
 
-    if (currentTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", currentTheme);
-      const toggleSwitch = this.shadowRoot.querySelector("#checkbox");
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      const toggleSwitch = this.shadowRoot.querySelector('#checkbox');
       toggleSwitch.checked = true;
       this.toggleLabel(true);
     }
