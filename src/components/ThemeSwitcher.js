@@ -39,7 +39,7 @@ const styles = css`
 
   .slider:before {
     background-color: #fff;
-    bottom: 4px;
+    bottom: 2px;
     content: '';
     height: 26px;
     left: 4px;
