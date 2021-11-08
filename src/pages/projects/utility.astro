@@ -1,7 +1,80 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+import '../../components/dev-tech.js';
 ---
+<style>
+.tech {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+a {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+a:hover {
+  color: var(--nav-hover-color);
+}
+.lightpoc {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 5rem;
+}
+
+.lightpoc::after {
+  content: "";
+  background: url(/assets/widget.webp) no-repeat;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+h1 {
+  text-transform: uppercase;
+}
+</style>
+
 <BaseLayout title="Utility POC">
-<h1>Utility POC</h1>
+
+  <div class="lightpoc">
+    <h1>Utility POC</h1>
+    <h2>Proof of concept billing system for a utility company</h2>
+  </div>
+
+  <h3>
+  The POC is made up of two dashboards, a search function and two customer pages. Each dashboard shows relevant information tailored to a specific person or role. Each of the roles
+  were identified as part of a design thinking process, which involved visiting several utility companies
+  in Denmark getting to know their businesses in detail. The customer 
+  pages shows relevant information for two types of electricity customers: a normal consumer and a prosumer 
+  who also produces electricity.
+  </h3>
+
+  <div>
+    <img src="/assets/poc-light.webp">
+    <img src="/assets/poc-dark.webp">
+  </div>
+
+  <h2>TECH</h2>
+  <h3>
+  Technically it's a very lean architecture. Being a POC, there is no backend. All API requests for data are mocked
+  in the browser. It's basically just Lit and Highcharts and nothing else. It was originally based on the <a href="https://github.com/Polymer/pwa-starter-kit" target="_blank">PWA Starter Kit</a>
+  from Google's Polymer project. 
+  </h3>
+
+  <div class="tech">
+    <dev-tech name="LIT" icon="/assets/lit.png" size="small" link="https://lit.dev"></dev-tech>
+    <dev-tech name="PWA" icon="/assets/pwa.png" size="small" link="https://pwa.dev/"></dev-tech>
+    <dev-tech name="HIGHCHARTS" icon="https://api.nuget.org/v3-flatcontainer/highsoft.highcharts/8.0.0.3/icon" size="small" link="https://www.highcharts.com/"></dev-tech>
+  </div>
+
+  <h2>Demo link and credentials:</h2>
+  <div> <a href="https://heuristic-ramanujan-737950.netlify.app/" target="_blank">DEMO</a></div>
+  <div><i>thomas</i> / <i>123456</i> <br/> <i>christian</i> / <i>123456</i></div>
+
 </BaseLayout>

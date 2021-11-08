@@ -1,7 +1,8 @@
 import { LitElement, css, html } from 'lit';
 
 const styles = css`
-  :host {
+  :host,
+  a {
     --font-size: var(--font-size-header);
     --image-width: 33px;
     --image-height: 33px;
@@ -9,6 +10,8 @@ const styles = css`
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
   }
   :host([size='large']) {
     --font-size: var(--font-size-title);
@@ -37,12 +40,17 @@ const styles = css`
     font-weight: 200;
     margin: 10px 0;
   }
+  a:hover {
+    color: var(--nav-hover-color);
+  }
 `;
 
 const template = (el) => html`
   <div><img src="${el.icon}" /></div>
   <h2>${el.name}</h2>
 `;
+const linkTemplate = (el) =>
+  html` <a href="${el.link}" target="_blank"> ${template(el)} </a> `;
 
 export class DevTechElement extends LitElement {
   static styles = styles;
@@ -51,6 +59,7 @@ export class DevTechElement extends LitElement {
     return {
       name: { type: String },
       icon: { type: String },
+      link: { type: String },
       size: { type: String, reflect: true },
     };
   }
@@ -61,7 +70,7 @@ export class DevTechElement extends LitElement {
   }
 
   render() {
-    return template(this);
+    return this.link ? linkTemplate(this) : template(this);
   }
 }
 

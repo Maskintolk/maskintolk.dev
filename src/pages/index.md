@@ -1,5 +1,5 @@
 ---
-title: About me
+title: Jakob Skov
 layout: ../layouts/BaseLayout.astro
 ---
 <style>
@@ -25,6 +25,6 @@ layout: ../layouts/BaseLayout.astro
   <img src="/assets/mig.svg" />
 <br />
 
-## Inquisitive and pragmatic JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX.
+## Inquisitive, compassionate and pragmatic JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX.
 
 </div>
