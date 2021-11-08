@@ -25,6 +25,6 @@ layout: ../layouts/BaseLayout.astro
   <img src="/assets/mig.svg" />
 <br />
 
-## Inquisitive, compassionate and pragmatic JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX.
+## Inquisitive, compassionate, pragmatic and DRY JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX
 
 </div>
