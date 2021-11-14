@@ -74,7 +74,7 @@ const styles = css`
 class ThemeSwitcher extends LitElement {
   constructor() {
     super();
-    this.label = 'Enable dark mode';
+    this.label = 'Light mode ☀️';
   }
 
   static get styles() {
@@ -89,7 +89,7 @@ class ThemeSwitcher extends LitElement {
   }
 
   toggleLabel(isDarkMode) {
-    this.label = isDarkMode ? 'Disable dark mode' : 'Enable dark mode';
+    this.label = isDarkMode ? 'Dark mode 🌙' : 'Light mode ☀️';
   }
 
   firstUpdated() {
