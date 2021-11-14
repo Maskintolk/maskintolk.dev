@@ -172,6 +172,9 @@ main {
     fill: var(--nav-hover-color);
     cursor: pointer;
   }
+  .sidebar > div {
+    width: 80%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
