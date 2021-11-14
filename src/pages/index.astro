@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../components/vanilla-rough-notation.js';
+
+---
+<style>
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 175px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+  }
+  h3 {
+    width: 45ch;
+    line-height: 2rem;
+  }
+</style>
+<BaseLayout title="Jakob Skov">
+  <div>
+
+  <rough-notation client:load showOnLoad type="underline"><h1>ABOUT ME</h1></rough-notation>
+
+  <br />
+    <img src="/assets/mig.svg" />
+  <br />
+
+  <h3>Inquisitive, compassionate, pragmatic and <i>DRY</i> JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX</h3>
+
+  </div>
+</BaseLayout>

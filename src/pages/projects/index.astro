@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 import '../../components/dev-tech.js';
 import '../../components/dev-project.js';
+import '../../components/vanilla-rough-notation.js';
 
 // TODO: Define every project in an .md file. That way we can import them
 //       and show them below.
@@ -25,7 +26,8 @@ dev-tech {
 }
 </style>
 <BaseLayout title="Personal projects">
-  <h1>Personal projects</h1>
+  <rough-notation client:load showOnLoad type="underline"><h1>Personal projects</h1></rough-notation>
+
 
   <dev-project name="Notion Page Widget" description="Notion page as (Android homepage) widget" github="https://github.com/Maskintolk/notion-page-widget" screenshot="/assets/notionwidget.jpg" page="/projects/notionwidget">
     <div slot="tech">

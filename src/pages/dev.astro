@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Markdown } from 'astro/components';
+
 import '../components/dev-tech';
+import '../components/vanilla-rough-notation.js';
 ---
 <style>
 .tech {
@@ -15,10 +17,11 @@ dev-tech {
   max-width: 200px;
 }
 </style>
-<BaseLayout title="Work Interests">
-  <Markdown>
-# WORK INTERESTS
 
+<BaseLayout title="Work Interests">
+  <rough-notation client:load showOnLoad type="underline"><h1>WORK INTERESTS</h1></rough-notation>
+
+  <Markdown>
 <br />
 
 ### After spending nearly 25 years working in the Danish IT industry, I have worked with my share of different tools and technologies.
