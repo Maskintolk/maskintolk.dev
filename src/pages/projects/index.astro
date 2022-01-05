@@ -18,6 +18,10 @@ h1 {
 dev-tech {
   margin-right: 20px;
 }
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
 
 @media (min-width: 768px) {
   h1 {
@@ -28,34 +32,51 @@ dev-tech {
 <BaseLayout title="Personal projects">
   <rough-notation client:load showOnLoad type="underline"><h1>Personal projects</h1></rough-notation>
 
+  <a href="/projects/spotpris">
+    <dev-project name="Spotpris Buddy" description="Flutter app for running household appliances when they're cheapest" github="https://github.com/Maskintolk/spotpris-buddy" screenshot="/assets/spotpris-home.png" page="/projects/spotpris">
+      <div slot="tech">
+        <dev-tech name="FLUTTER" icon="/assets/flutter.png" size="small"></dev-tech>
+        <dev-tech name="SUPABASE" icon="/assets/supabase.png" size="small"></dev-tech>
+        <dev-tech name="BARRY API" icon="/assets/barry.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </a>
 
-  <dev-project name="Notion Page Widget" description="Notion page as (Android homepage) widget" github="https://github.com/Maskintolk/notion-page-widget" screenshot="/assets/notionwidget.jpg" page="/projects/notionwidget">
-    <div slot="tech">
-      <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
-      <dev-tech name="VITE" icon="/assets/vite.svg" size="small"></dev-tech>
-      <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
-    </div>
-  </dev-project>
+  <a href="/projects/maskintolk">
+    <dev-project name="Maskintolk.dev" description="This website" github="https://github.com/Maskintolk/maskintolk.dev" page="/projects/maskintolk" screenshot="/assets/maskintolk.jpg">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </a>
 
-  <dev-project name="My Family Bookclub" description="Show a list of pages from a Notion database" github="https://github.com/Maskintolk/astro_notion_feed" screenshot="/assets/bookclub.jpg" page="/projects/bookclub">
-    <div slot="tech">
-      <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
-      <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
-      <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
-    </div>
-  </dev-project>
+  <a href="/projects/lagipiere">
+    <dev-project name="lagipiere.com" description="Rental showcase" page="/projects/lagipiere" screenshot="/assets/thehouse.jpg">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="TYPESCRIPT" icon="/assets/typescript.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </a>
 
-  <dev-project name="Maskintolk.dev" description="This website" github="https://github.com/Maskintolk/maskintolk.dev" page="/projects/maskintolk" screenshot="/assets/maskintolk.jpg">
-    <div slot="tech">
-      <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
-      <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
-    </div>
-  </dev-project>
+  <a href="/projects/notionwidget">
+    <dev-project name="Notion Page Widget" description="Notion page as (Android homepage) widget" github="https://github.com/Maskintolk/notion-page-widget" screenshot="/assets/notionwidget.jpg" page="/projects/notionwidget">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="VITE" icon="/assets/vite.svg" size="small"></dev-tech>
+        <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </a>
 
-  <dev-project name="lagipiere.com" description="Rental showcase" page="/projects/lagipiere" screenshot="/assets/thehouse.jpg">
-    <div slot="tech">
-      <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
-      <dev-tech name="TYPESCRIPT" icon="/assets/typescript.png" size="small"></dev-tech>
-    </div>
-  </dev-project>
+  <a href="/projects/bookclub">
+    <dev-project name="My Family Bookclub" description="Show a list of pages from a Notion database" github="https://github.com/Maskintolk/astro_notion_feed" screenshot="/assets/bookclub.jpg" page="/projects/bookclub">
+      <div slot="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+        <dev-tech name="ASTRO" icon="/assets/astro.png" size="small"></dev-tech>
+        <dev-tech name="NOTION API" icon="/assets/notion.png" size="small"></dev-tech>
+      </div>
+    </dev-project>
+  </a>
 </BaseLayout>
