@@ -2,6 +2,38 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 ---
+<style>
+.tech {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+</style>
+
 <BaseLayout title="lagipiere.com">
 <h1>lagipiere.com</h1>
+
+<h3>
+    Web site POC for a holiday home rental site. The site puts an emphasis
+    on large inviting images and uses swiping for navigation on mobile devices and tablets.
+</h3>
+
+<div>
+    <img src="/assets/pool.webp" title="Holiday home" alt="Screenshot of a holiday home" />
+    <img src="/assets/poolm.webp" title="Holiday home" alt="Screenshot of a holiday home" />
+</div>
+
+<h3>
+    The showcasing of the house amenities is still a work in progress...
+</h3>
+
+<h2>TECH</h2>
+<div class="tech">
+    <dev-tech name="LIT" icon="/assets/lit.png" size="small" link="https://lit.dev"></dev-tech>
+    <dev-tech name="Storybook" icon="/assets/storybook.png" size="small" link="https://storybook.js.org/"></dev-tech>
+    <dev-tech name="Open Web Components" icon="/assets/open-wc.svg" size="small" link="https://open-wc.org/"></dev-tech>
+</div>
+
+<div> <a href="https://www.lagipiere.com/" target="_blank">DEMO</a></div>
+ 
 </BaseLayout>
