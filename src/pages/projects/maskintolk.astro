@@ -6,11 +6,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 h1 {
   text-transform: uppercase;
 }
+.tech {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 </style>
 <BaseLayout title="maskintolk.dev">
     <h1>maskintolk.dev</h1>
 
     <h3>This website 🙂</h3>
+
+    <h2>TECH</h2>
+    <div class="tech">
+        <dev-tech name="LIT" icon="/assets/lit.png" size="small" link="https://lit.dev"></dev-tech>
+        <dev-tech name="ASTRO" icon="/assets/astro.png" size="small" link="https://astro.build/"></dev-tech>
+    </div>
 
     <h2>SOURCE</h2>
     <div class="tech">
