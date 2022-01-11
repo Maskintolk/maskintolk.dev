@@ -34,6 +34,7 @@ const styles = css`
   img {
     width: var(--image-width);
     height: var(--image-height);
+    filter: grayscale(100%);
   }
   h2 {
     font-size: var(--font-size);
