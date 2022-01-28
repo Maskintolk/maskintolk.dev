@@ -4,10 +4,6 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 const styles = css`
   :host {
     --image-width: 290px;
-
-    display: block;
-    width: 290px;
-    background-color: var(--card-background-color);
   }
   h3 {
     font-size: var(--font-size-text);
@@ -32,7 +28,6 @@ const styles = css`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: var(--image-width);
     padding: 10px 20px;
   }
   .more {
@@ -48,23 +43,12 @@ const styles = css`
   img {
     width: var(--image-width);
     height: var(--image-width);
-  }
-
-  @media (min-width: 768px) {
-    :host {
-      display: grid;
-      grid-template-columns: var(--image-width) 1fr;
-      grid-template-rows: 1fr;
-      min-width: 700px;
-      height: var(--image-width);
-    }
+    border-radius: 20px;
+    margin-top: 20px;
   }
 `;
 
 const template = (el) => html`
-  <div class="image">
-    <img src="${el.screenshot}" />
-  </div>
   <div class="main">
     <div>
       <div class="title">${el.name}</div>
@@ -72,7 +56,10 @@ const template = (el) => html`
         <p>${unsafeHTML(el.description)}</p>
       </div>
     </div>
-    <div class="tech">
+    <div class="image">
+      <img src="${el.screenshot}" />
+    </div>
+    <div>
       <h3>TECH</h3>
       <slot name="tech"></slot>
     </div>

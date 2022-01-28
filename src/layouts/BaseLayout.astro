@@ -21,6 +21,10 @@ const {content, title} = Astro.props;
   <title>{title || content.title}</title>
 </head>
 <body>
+  <div class="menu">
+    <wrapper><input type="checkbox" /><bun><burger></burger></bun></wrapper>
+    <h1>Jakob Skov</h1>
+  </div>
   <div class="sidebar">
     <div>
       <h1>Jakob Skov</h1>
@@ -55,4 +59,12 @@ const {content, title} = Astro.props;
 <script>
   // This prevents flickering when dark mode is on while changing between pages
   document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+
+  // Animate the menu when on mobile
+  const sidebar = document.querySelector('.sidebar');
+  const menuchk = document.querySelector('wrapper input');
+
+  menuchk.addEventListener('click', () => {
+    sidebar.classList.toggle('menuactive');
+  });
 </script>
