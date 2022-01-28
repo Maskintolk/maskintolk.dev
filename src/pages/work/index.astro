@@ -4,51 +4,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../components/dev-tech.js';
 import '../../components/dev-project.js';
 import '../../components/vanilla-rough-notation.js';
-
-// TODO: Define every project in an .md file. That way we can import them
-//       and show them below.
-//       This makes it easy to implement filtering when displaying them
-//       It also makes it possible to update projects straight from Github
 ---
-<style>
-h1 {
-  margin-top: 60px;
-  text-transform: uppercase;
-}
-dev-tech {
-  margin-right: 20px;
-}
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
+<BaseLayout title="Experience">
+  <rough-notation client:load showOnLoad type="underline"><h1>Experience</h1></rough-notation>
 
-@media (min-width: 768px) {
-  h1 {
-    margin: 0;
-  }
-}
-</style>
-<BaseLayout title="Work experience">
-  <rough-notation client:load showOnLoad type="underline"><h1>Work Experience</h1></rough-notation>
+  <dev-project name="Utility POC" description="Utility billing system POC" page="/projects/utility" screenshot="/assets/poc-light.jpg">
+    <div slot="tech">
+      <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
+      <dev-tech name="PWA" icon="/assets/pwa.png" size="small"></dev-tech>
+      <dev-tech name="HIGHCHARTS" icon="https://api.nuget.org/v3-flatcontainer/highsoft.highcharts/8.0.0.3/icon" size="small"></dev-tech>
+    </div>
+  </dev-project>
 
-  <a href="/projects/utility">
-    <dev-project name="Utility POC" description="Utility billing system POC" page="/projects/utility" screenshot="/assets/poc-light.jpg">
-      <div slot="tech">
-        <dev-tech name="LIT" icon="/assets/lit.png" size="small"></dev-tech>
-        <dev-tech name="PWA" icon="/assets/pwa.png" size="small"></dev-tech>
-        <dev-tech name="HIGHCHARTS" icon="https://api.nuget.org/v3-flatcontainer/highsoft.highcharts/8.0.0.3/icon" size="small"></dev-tech>
-      </div>
-    </dev-project>
-  </a>
-
-  <a href="/work/flexlink">
-    <dev-project name="FlexLink REST API" description="REST API for iPhone app" page="/work/flexlink" screenshot="/assets/noimage.jpg">
-      <div slot="tech">
-        <dev-tech name=".NET Core" icon="/assets/netcore.png" size="small"></dev-tech>
-        <dev-tech name="Swagger" icon="/assets/swagger.png" size="small"></dev-tech>
-        <dev-tech name="Push Notifications" icon="/assets/notifications-hero.png" size="small"></dev-tech>
-      </div>
-    </dev-project>
-  </a>
+  <dev-project name="FlexLink REST API" description="REST API for iPhone app" page="/work/flexlink" screenshot="/assets/noimage.jpg">
+    <div slot="tech">
+      <dev-tech name=".NET Core" icon="/assets/netcore.png" size="small"></dev-tech>
+      <dev-tech name="Swagger" icon="/assets/swagger.png" size="small"></dev-tech>
+      <dev-tech name="Push Notifications" icon="/assets/notifications-hero.png" size="small"></dev-tech>
+    </div>
+  </dev-project>
 </BaseLayout>

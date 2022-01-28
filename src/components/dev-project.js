@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 const styles = css`
   :host {
@@ -68,7 +69,7 @@ const template = (el) => html`
     <div>
       <div class="title">${el.name}</div>
       <div class="description">
-        <p>${el.description}</p>
+        <p>${unsafeHTML(el.description)}</p>
       </div>
     </div>
     <div class="tech">

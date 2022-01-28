@@ -30,8 +30,6 @@
   --font-size-text: 1rem;
   --font-size-header: 1.2rem;
   --font-size-title: 2rem;
-
-  --sidebar-position: fixed;
 }
 
 [data-theme='dark'] {
@@ -55,6 +53,8 @@ body {
 }
 a {
   text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-color);
 }
 a:hover {
   color: var(--nav-hover-color);
@@ -85,7 +85,6 @@ h3 {
   max-width: 65ch;
 }
 .sidebar {
-  position: var(--sidebar-position);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,8 +93,9 @@ h3 {
   color: var(--sidebar-primary-color);
   text-align: center;
 }
-.sidebar h1 {
+h1 {
   text-transform: uppercase;
+  padding: 0 20px;
 }
 #notion--notion img {
   fill: var(--primary-color);
@@ -104,25 +104,44 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
   text-align: center;
+  padding-top: 2rem;
+}
+div.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+dev-project {
+  margin: 10px 0;
+}
+dev-project dev-tech {
+  margin-right: 10px;
+}
+rough-notation h1 {
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
   body {
-    padding: 2rem 8rem 2rem 28rem;
-    width: 100%;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-areas: 'sidebar main';
   }
   .sidebar a:hover {
     color: var(--nav-hover-color);
   }
   .sidebar {
+    position: sticky;
     bottom: 0;
     left: 0;
     top: 0;
     padding: 2rem 0;
     width: 20rem;
+    height: 600px;
     margin: 2rem;
     border-radius: 20px;
   }
@@ -178,8 +197,9 @@ main {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  main {
-    padding: 2rem 1rem;
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'sidebar' 'main';
   }
   .sidebar {
     height: 4rem;

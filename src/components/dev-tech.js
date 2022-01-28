@@ -29,7 +29,7 @@ const styles = css`
     --image-height: calc(33px * 0.8);
   }
   div {
-    margin-right: 10px;
+    margin-right: 3px;
   }
   img {
     width: var(--image-width);

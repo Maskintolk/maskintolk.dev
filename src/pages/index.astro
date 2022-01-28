@@ -4,46 +4,59 @@ import '../components/vanilla-rough-notation.js';
 
 ---
 <style>
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 40px;
+  }
   img {
     border-radius: 50%;
     width: 200px;
     height: 175px;
   }
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 90vh;
-  }
   h3 {
-    width: 45ch;
+    max-width: 45ch;
     line-height: 1.5rem;
   }
   a {
-    text-decoration: none;
-    text-transform: uppercase;
     font-size: var(--font-size-text);
     font-weight: 300;
-    color: var(--primary-color);
   }
-  a:hover {
-    color: var(--nav-hover-color);
+  div.centered nav {
+    display: none;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    div.centered nav {
+      display: block;
+    }
+    h3 {
+      width: auto;
+      padding: 20px;
+    }
   }
 </style>
 <BaseLayout title="Jakob Skov">
-  <div>
+  <div class="centered">
     <rough-notation client:load showOnLoad type="underline"><h1>ABOUT ME</h1></rough-notation>
 
-    <br />
+    <div class="flex">
       <img src="/assets/mig.svg" />
-    <br />
 
-    <h3>Inquisitive, compassionate, pragmatic and <i>DRY</i> JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX</h3>
+      <h3>Inquisitive, compassionate, pragmatic and <i>DRY</i> JavaScript/TypeScript web developer with a keen interest in Flutter, users and UX</h3>
 
-    <br />
+      <a target="_blank" href="https://jakobskov.notion.site/Jakob-Skov-Frontend-Developer-f0223f4a83de447999eb2b303ecbf3de">Résumé / CV</a>
+    </div>
 
-    <a target="_blank" href="https://jakobskov.notion.site/Jakob-Skov-Frontend-Developer-f0223f4a83de447999eb2b303ecbf3de">Résumé / CV</a>  
+    <nav>
+      <div><a href="/">About me</a></div>
+      <div><a href="/dev">Interests</a></div>
+      <div><a href="/work">Experience</a></div>
+      <div><a href="/projects">Personal Projects</a></div>
+      <div><a href="/contact">Contact</a></div>
+    </nav>
   </div>
 </BaseLayout>
