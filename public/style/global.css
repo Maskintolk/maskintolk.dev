@@ -145,6 +145,11 @@ main {
   text-align: center;
   padding-top: 2rem;
 }
+main h2,
+main div,
+main h3 {
+  margin: 15px;
+}
 div.centered {
   display: flex;
   flex-direction: column;
